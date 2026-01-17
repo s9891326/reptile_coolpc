@@ -1,14 +1,14 @@
 name: Daily Scraper
 
 on:
-  push:
-    branches:
-      - master  # 當 master 分支有 push 時觸發
-  workflow_dispatch: # 保留手動觸發功能，方便測試
-  # schedule:
-  #   # Runs at 09:00 AM (UTC+8) -> 01:00 AM UTC
-  #   - cron: '*/1 * * * *'
-  # workflow_dispatch: # Allows manual trigger
+  # push:
+  #   branches:
+  #     - master  # 當 master 分支有 push 時觸發
+  # workflow_dispatch: # 保留手動觸發功能，方便測試
+  schedule:
+    # Runs at 09:00 AM (UTC+8) -> 01:00 AM UTC
+    - cron: '0 1 * * *'
+  workflow_dispatch: # Allows manual trigger
 
 jobs:
   build:
