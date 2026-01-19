@@ -47,7 +47,9 @@ def get_today_leave_status():
     """Scrapes the website and checks for target employees on leave today."""
 
     # 1. Get Today's Date in MM/DD format (e.g., "01/17")
-    today = datetime.datetime.now()
+    # GitHub Actions runners are in UTC, so we must add 8 hours for Taiwan Time
+    tz = datetime.timezone(datetime.timedelta(hours=8))
+    today = datetime.datetime.now(tz)
     date_str = today.strftime("%m/%d")
     print(f"Checking leave status for: {date_str}")
 
