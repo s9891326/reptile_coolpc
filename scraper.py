@@ -12,7 +12,7 @@ load_dotenv()
 LINE_CHANNEL_ACCESS_TOKEN = os.getenv("LINE_CHANNEL_ACCESS_TOKEN")
 LINE_TARGET_ID = os.getenv("LINE_TARGET_ID")  # User ID or Group ID
 TARGET_URL = "https://cloud.coolpc.com.tw:168/"
-TARGET_NAMES = ["王韋勝", "戴克羽", "廖桂彬", "白森中", "廖克豪", "謝伯承", "劉翔曜"]
+TARGET_NAMES = ["王韋勝", "戴克羽", "廖桂彬", "白森中", "廖克豪", "謝伯承", "劉翔曜", "葉安順", "陳少東", "黃裕鈞", "陳彥閎"]
 
 
 def send_line_message(message):
