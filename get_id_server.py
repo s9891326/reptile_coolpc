@@ -4,7 +4,6 @@ from flask import Flask, request, abort
 
 app = Flask(__name__)
 
-
 @app.route("/callback", methods=["POST"])
 def callback():
     # 1. Get the request body
